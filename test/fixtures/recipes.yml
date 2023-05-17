@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  session: one
+  title: MyString
+  introduction: MyString
+  unbounded: MyString
+  file: one
+
+two:
+  session: two
+  title: MyString
+  introduction: MyString
+  unbounded: MyString
+  file: two

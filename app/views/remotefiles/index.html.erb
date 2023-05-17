@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Remotefiles</h1>
+
+<div id="remotefiles">
+  <% @remotefiles.each do |remotefile| %>
+    <%= render remotefile %>
+    <p>
+      <%= link_to "Show this remotefile", remotefile %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New remotefile", new_remotefile_path %>
