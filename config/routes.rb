@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post 'sources/request' => 'sources#request'
   resources :remotefiles
   resources :users
   resources :instructions
