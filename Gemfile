@@ -3,9 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "~> 3.2.0"
 
-gem 'rack-cors'
+gem "dotenv-rails", groups: [:development, :test]
 
-gem 'fatsecret-api'
+gem "rack-cors"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0"

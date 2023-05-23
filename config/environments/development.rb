@@ -18,6 +18,7 @@ Rails.application.configure do
   config.server_timing = true
 
   # Enable/disable caching. By default caching is disabled.
+
   # Run rails dev:cache to toggle caching.
   if Rails.root.join("tmp/caching-dev.txt").exist?
     config.action_controller.perform_caching = true
@@ -76,6 +77,7 @@ Rails.application.configure do
   # Allow requests from our preview domain.
   pf_host = "#{ENV['CODESPACE_NAME']}-3000.#{pf_domain}"
   config.hosts << pf_host
+  config.hosts << /[a-z0-9-.]+\.ngrok-free\.app/
 
   config.action_cable.allowed_request_origins = ["https://#{pf_host}"]
 end
