@@ -14,7 +14,7 @@ class RecipesTest < ApplicationSystemTestCase
     visit recipes_url
     click_on "New recipe"
 
-    fill_in "File", with: @recipe.file_id
+    fill_in "File", with: @recipe.remotefile_id
     fill_in "Introduction", with: @recipe.introduction
     fill_in "Session", with: @recipe.session_id
     fill_in "Title", with: @recipe.title
@@ -29,7 +29,7 @@ class RecipesTest < ApplicationSystemTestCase
     visit recipe_url(@recipe)
     click_on "Edit this recipe", match: :first
 
-    fill_in "File", with: @recipe.file_id
+    fill_in "File", with: @recipe.remotefile_id
     fill_in "Introduction", with: @recipe.introduction
     fill_in "Session", with: @recipe.session_id
     fill_in "Title", with: @recipe.title

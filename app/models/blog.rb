@@ -4,5 +4,5 @@ class Blog < ApplicationRecord
 		has_and_belongs_to_many :tags
 	has_many :histories, as: :historiable
   belongs_to :session
-  belongs_to :file
+  belongs_to :remotefile, optional: true
 end

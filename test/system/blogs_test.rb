@@ -14,7 +14,7 @@ class BlogsTest < ApplicationSystemTestCase
     visit blogs_url
     click_on "New blog"
 
-    fill_in "File", with: @blog.file_id
+    fill_in "File", with: @blog.remotefile_id
     fill_in "Introduction", with: @blog.introduction
     fill_in "Session", with: @blog.session_id
     fill_in "Title", with: @blog.title
@@ -29,7 +29,7 @@ class BlogsTest < ApplicationSystemTestCase
     visit blog_url(@blog)
     click_on "Edit this blog", match: :first
 
-    fill_in "File", with: @blog.file_id
+    fill_in "File", with: @blog.remotefile_id
     fill_in "Introduction", with: @blog.introduction
     fill_in "Session", with: @blog.session_id
     fill_in "Title", with: @blog.title

@@ -17,7 +17,7 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create recipe" do
     assert_difference("Recipe.count") do
-      post recipes_url, params: { recipe: { file_id: @recipe.file_id, introduction: @recipe.introduction, session_id: @recipe.session_id, title: @recipe.title, unbounded: @recipe.unbounded } }
+      post recipes_url, params: { recipe: { file_id: @recipe.remotefile_id, introduction: @recipe.introduction, session_id: @recipe.session_id, title: @recipe.title, unbounded: @recipe.unbounded } }
     end
 
     assert_redirected_to recipe_url(Recipe.last)
@@ -34,7 +34,7 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update recipe" do
-    patch recipe_url(@recipe), params: { recipe: { file_id: @recipe.file_id, introduction: @recipe.introduction, session_id: @recipe.session_id, title: @recipe.title, unbounded: @recipe.unbounded } }
+    patch recipe_url(@recipe), params: { recipe: { file_id: @recipe.remotefile_id, introduction: @recipe.introduction, session_id: @recipe.session_id, title: @recipe.title, unbounded: @recipe.unbounded } }
     assert_redirected_to recipe_url(@recipe)
   end
 

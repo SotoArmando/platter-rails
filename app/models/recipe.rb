@@ -7,5 +7,5 @@ class Recipe < ApplicationRecord
 		has_and_belongs_to_many :remotefiles
 	has_many :histories, as: :historiable
   belongs_to :session
-  belongs_to :file
+  belongs_to :remotefile
 end

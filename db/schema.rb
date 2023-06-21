@@ -16,10 +16,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_17_215759) do
     t.string "title"
     t.string "introduction"
     t.string "unbounded"
-    t.integer "file_id", null: false
+    t.integer "remotefile_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["file_id"], name: "index_blogs_on_file_id"
+    t.index ["remotefile_id"], name: "index_blogs_on_remotefile_id"
     t.index ["session_id"], name: "index_blogs_on_session_id"
   end
 
@@ -115,10 +115,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_17_215759) do
     t.string "title"
     t.string "introduction"
     t.string "unbounded"
-    t.integer "file_id", null: false
+    t.integer "remotefile_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["file_id"], name: "index_recipes_on_file_id"
+    t.index ["remotefile_id"], name: "index_recipes_on_remotefile_id"
     t.index ["session_id"], name: "index_recipes_on_session_id"
   end
 
@@ -186,13 +186,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_17_215759) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "blogs", "files"
+  add_foreign_key "blogs", "remotefiles"
   add_foreign_key "blogs", "sessions"
   add_foreign_key "histories", "sessions"
   add_foreign_key "instructions", "recipes"
   add_foreign_key "libraries", "sessions"
   add_foreign_key "profiles", "sessions"
-  add_foreign_key "recipes", "files"
+  add_foreign_key "recipes", "remotefiles"
   add_foreign_key "recipes", "sessions"
   add_foreign_key "sessions", "users"
   add_foreign_key "states", "sessions"
